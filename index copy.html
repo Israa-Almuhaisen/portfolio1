@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/ccf160e1e6.js" crossorigin="anonymous"></script>
+    <title>Portfolio</title>
+    <style>
+        body{
+          font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        a{
+          text-decoration: none;
+        }
+        
+        .header{
+            display: flex;
+            flex-direction: row;
+            background-color: #AF869C;
+            color: white;
+            height: 80px;
+            align-items: center; 
+            position: fixed;  
+            width: 100%;
+            z-index: 1;
+            /* margin-top: -1%; */
+        }
+
+        .header > #logo{
+          
+            padding-left: 10px;
+
+        }
+        .nav-bar{
+            /* text-align: center; */
+            padding-left: 450px;
+        }
+        .nav-bar > a{
+            color: white;
+            text-decoration: none ;
+            font-weight:bold;
+            font-size:30px ;
+            padding: 5px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+        }
+        
+        .nav-bar > a:hover{
+            font-weight:bolder;
+            color: #606d7d;
+        }
+
+        .bannar-main{
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            display: block;
+            /* margin-left:1%; */
+            /* padding-top: 10%; */
+            height: 50vh;
+            width: 100%; 
+        }
+        .upcover{
+            text-align: center;
+            color:white;
+        }
+        .upcover h1{
+            text-transform: capitalize;
+            /* font-weight: 700; */
+            font-size: 4vw;
+            /* margin-top:10% ; */
+            /* display: inline-block; */
+            text-shadow:2.5px 2.5px orange ;
+            background-color:rgba(172, 176, 180, 0.525); 
+        }
+
+        
+        .upcover h3{
+            text-transform: capitalize;
+            /* display: inline; */
+            font-size: 2.5vw;
+            text-shadow:2.5px 2.5px orange ;
+            background-color:rgba(172, 176, 180, 0.525); 
+        }
+        .section-background{
+            background-color: rgb(226, 130, 59); 
+            width: 100%; 
+            margin-top: 1%; 
+        }
+        .objectiveclass{
+            display: flex;
+        }
+
+        .section-container{
+            width: 65%;
+            margin-left: 17%; 
+            align-items: center;
+            /* margin-top: %; */
+            padding-top: 4%;
+            /* height:35vw;   */
+             }
+
+        .section-container h2{
+            color:black;
+            font-weight: bolder;
+            font-size: 3.3vw;
+         }
+
+        .section-container p{ 
+            color:black;
+            font-size: 2vw;
+            height:36vw;
+        }
+        #my-pic{
+          height:28vw;
+          width:22vw;
+          border-radius: 15%;
+        }
+        
+        
+       
+       .container-card{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top: 2vw;
+       }
+
+       .card{
+        background-color: rgba(248, 198, 133, 0.856);
+        box-shadow: 5px 5px rgb(121, 118, 117);
+        width: 25vw;
+        /* height: 25vw; */
+        border-radius: 10%;
+        padding:15px;
+        margin-bottom: 5%;
+       }
+       /* heder for card */
+       .school-icon{
+        display: flex;
+        background-color: rgba(236, 167, 77, 0.578);
+        border-radius: 15%;
+        box-shadow: -3px -3px gray;
+        /* vertical-align:bottom; */
+       }
+       .school-icon i{
+        font-size: 5vw;
+        color:black;       
+       }
+       .school-icon h4{
+        font-size: 2.1vw;
+        padding-top: 10px;
+        padding-left: 5px;
+       }
+        /* data in card */
+       .school-info{
+        /* display: flex; */
+        border-radius: 1%;
+        /* padding: 1%; */
+       }
+       .school-info span{
+        font-size: 1.5vw;
+        color:black;
+        /* display: block; */
+       }
+       .school-info i{
+        display: block;
+        font-size: 2vw;
+        color:rgba(72, 72, 70, 0.838);
+       text-align: center;
+       }
+
+        .carousel-item img{ 
+            height: 25vw;
+            width: 80% !important;
+           padding-left: 20%;
+        }
+
+        .carousel-item h5{
+            text-transform: capitalize;
+            font-weight: 700;
+            font-size: 2.5vw;
+            display: inline-block;
+        }
+
+        .carousel-item p{
+            color: white;
+             text-transform: capitalize;
+            display: inline;
+            font-size: 1.7vw;
+        }
+        .carousel-item a{ 
+            /* color: white; */
+            text-shadow: 3px 3px 6px orange;
+            text-decoration: none;
+            /* background-color: rgba(118, 115, 115, 0.555); */
+            text-transform: capitalize;
+            font-weight: 700;
+            font-size: 3.3vw;
+            display: inline-block;
+            padding-top:18% ;
+        }
+
+        .carousel-item a:hover{
+            font-weight:900;
+            font-size:5vw;
+            /* color: rgba(249, 236, 160, 0.842); */
+            text-shadow: 6px 8px rgba(151, 151, 145, 0.37);
+        }
+        #grid-container{
+            /* border:1px solid black; */
+            display: grid;
+            grid-template-columns: repeat(2,auto);
+            column-gap:5px;
+            row-gap:5px;  
+            text-align: center; 
+            font-size:2.5vw;
+        }
+        .skills-header{
+          background-color:gray;
+          color:white;
+          font-weight: bolder;
+          font-size: 3vw;
+        }
+        .change{
+          font-size: 2.8vw;
+        }
+
+       .change:hover{
+          color:rgb(249, 234, 234);
+          /* font-size: 3.5vw; */
+        }
+        
+
+        .built-footer{
+           background-color: rgb(111, 111, 111);
+            color: white;
+            /* width: 100%;  */          
+        }
+
+      .grid-footer{
+        display: grid;
+        /* font-size: 3vw; */
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        column-gap: 7px;
+        row-gap: 5px;
+        padding: 6vw 8vw 5vw 8vw;
+        
+      }
+    
+      .grid-footer div{
+        font-size: 2vw;
+      } 
+      #logo-footer{
+        grid-row: 1 / span 2;
+      }
+
+     .footer_icon{
+      color: rgb(226, 130, 59);
+       background:rgb(111, 111, 111);
+        font-size:4vw; 
+         /* border-radius:50%;          */
+      } 
+
+     
+
+
+    
+       @media(max-width:450px){
+        .nav-bar{
+            /* text-align: center; */
+            padding-left:5px;
+        }
+        .nav-bar > a{
+             text-align: center; 
+            padding-left:1px;
+            font-size: 10px; 
+        }
+        .section-container h2{
+            color:black;
+            font-size: 15px;
+            height:auto; 
+         }
+         .section-container p{ 
+            color:black;
+            font-size: 12px;
+            height:auto;
+        }
+        .section-container{
+            width: 90%;
+            margin-left: 5%; 
+            padding-top: 4%;      
+             }
+             .upcover h1{
+            font-size: 20px;
+            text-shadow:2.5px 2.5px rgb(228, 17, 17) ;
+            background-color:rgba(107, 111, 116, 0.833); 
+        }
+
+        
+        .upcover h3{
+            font-size: 15px;
+            text-shadow:2.5px 2.5px rgb(228, 17, 17) ;
+            background-color:rgba(107, 111, 116, 0.833); 
+        }
+
+        .grid-footer div{
+        font-size: 8px;
+      } 
+    
+
+     .footer_icon{
+        font-size:20px; 
+      } 
+
+      #my-pic{
+          height:80px;
+          width:70px;
+          border-radius: 15%;
+        }
+        .change{
+          font-size: 10px;
+        }
+        
+       .change:hover{
+          color:white;
+          font-size: 12px;
+        }
+
+        
+       .container-card{
+        
+        padding-top: 1px;
+       }
+
+       .card{
+        box-shadow: none;
+        width: 150px;
+        /* height: 25vw; */
+        border-radius: 10%;
+        padding:5px;
+        margin-bottom: 3%;
+       }
+       .school-icon{
+        border-radius: 10%;
+        box-shadow: none;
+        /* vertical-align:bottom; */
+       }
+       .school-icon i{
+        font-size: 19px;
+              
+       }
+       .school-icon h4{
+        font-size: 13px;
+        padding-top: 2px;
+        padding-left: 1px;
+       }
+       .school-info{
+        border-radius: .5%;
+        padding: 0;
+        margin: 0;
+       }
+       .school-info span{
+        font-size: 10px;
+        color:black;
+       
+       }
+       .school-info i{
+        font-size:9px;
+       text-align: center;
+       }
+
+       }
+
+
+    
+    </style>
+</head>
+
+<body>
+<header>
+    <div class="header">
+        <div id="logo">
+            <img src="./photo/logo.png" style="height: 5vw;" alt="Logo">
+        </div>
+        <div class="nav-bar">
+            <a href="#objectives">Objectives</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+      </div>
+</header>
+<content>
+    <section id="objectives" class="section-background" >
+      <div class="bannar-main" style="background-image:url(./photo/laptop.jpg) ; ">
+        <div class="upcover">
+             <h1></h1>
+             <h3>Full Stack Developer</h3>
+        </div>
+    </div>
+
+       <div class="section-container"> 
+        <div class="objectiveclass">
+            <div>
+                <h2>About Me</h2> 
+                <P>I'm a full stack web developer striving to realize projects byond expectations. I have serious passion for making aesethic web pages, and creating intuitive user experiences.
+                <br><strong>Front-End: </strong>JavaScript, HTML5, CSS3
+                <br>
+                <strong>Back-End: </strong>Php, MS SQL Server, Laravel                
+                <a style="padding-left: 17vw; padding-top: 1.5vw;" type="button" download="CV-AlMuhaisen" href="./CV-AlMuhaisen.pdf" target="_blank"> <i class="fa-sharp fa-solid fa-print "></i> Download My CV </i></a></P>
+              </div>
+
+            
+
+            <div style="padding-top: 4vw; padding-left:3.5vw"><img id="my-pic" src="./photo/mypic1.jpg" alt="mypic"></div>
+        </div>
+        <!-- margin-left: 50px; -->
+    </div>
+    </section>
+
+    
+
+    <section id="education" class="section-background">
+        
+      <div class="bannar-main" style="background-image:url(./photo/education2.jpg); ">
+          <div class="upcover">
+               <h1 id="education">education</h1>
+               <!-- <h3></h3> -->
+          </div>
+      </div>
+
+      <div class="section-container">
+        <h2>Education</h2>
+    <div class="container-card">
+
+      <div class="card">
+
+        <div class="school-icon">
+          <i class="fa-solid fa-laptop-code"></i>
+          <h4>Orange Academy</h4>
+        </div>
+        <hr>
+        <div class="school-info">
+          
+          <span>Full stack web development trainee at Orange Coding Academy.
+            </span>
+          <i>2023</i>
+        </div>
+      </div>
+      <div class="card">
+        <div class="school-icon">
+          <i class="fa-solid fa-user-graduate"></i>
+          <h4>The University of Jordan</h4>
+        </div>
+        <hr>
+        <div class="school-info">
+          
+          <span>B.Sc. in Computer Information Systems.</span>
+          <i>2014</i>
+        </div>
+      </div>
+
+      
+     
+    </div>
+          
+            
+      
+  </section>
+    <section id="projects" class="section-background">
+        <div class="bannar-main" style="background-image:url(./photo/projects.png); ">
+            <div class="upcover">
+                 <h1>projects</h1>
+                 <h3></h3>
+            </div>
+        </div>
+        <div class="section-container" style="height:36vw;margin-top:-1vw;">
+                    <!-- <h2>Projects</h2> -->
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8" aria-label="Slide 9"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9" aria-label="Slide 10"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./photo/logo.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1><a href="https://israa-almuhaisen.github.io/portfolio1/" target="_blank"> Portfolio</a></h1>
+                    <p><a href="https://github.com/Israa-Almuhaisen/portfolio1" target="_blank"> Gethub</a></p>
+                 
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./photo/coming-soon-project.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Coming Soon Project</h5>
+                  <p>30/11/2022</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./photo/coming-soon-project.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Coming Soon Project</h5>
+                  <p>30/12/2022</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./photo/coming-soon-project.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Coming Soon Project</h5>
+                  <p>30/12/2022</p>
+                </div>
+              </div><div class="carousel-item">
+                <img src="./photo/coming-soon-project.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Coming Soon Project</h5>
+                  <p>30/1/2023</p>
+                </div>
+              </div><div class="carousel-item">
+                <img src="./photo/coming-soon-project.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Coming Soon Project</h5>
+                  <p>30/1/2023</p>
+                </div>
+              </div><div class="carousel-item">
+                <img src="./photo/coming-soon-project.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Coming Soon Project</h5>
+                  <p>30/2/2023</p>
+                </div>
+              </div><div class="carousel-item">
+                <img src="./photo/coming-soon-project.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Coming Soon Project</h5>
+                  <p>30/2/2023</p>
+                </div>
+              </div><div class="carousel-item">
+                <img src="./photo/coming-soon-project.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Coming Soon Project</h5>
+                  <p>30/2/2023</p>
+                </div>
+              </div><div class="carousel-item">
+                <img src="./photo/coming-soon-project.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Coming Soon Project</h5>
+                  <p>30/3/2023</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section-background">
+        
+        <div class="bannar-main" style="background-image:url(./photo/experience.jpg); ">
+            <div class="upcover">
+                 <h1 id="experience">Experience</h1>
+                 <h3></h3>
+            </div>
+        </div>
+
+        <div class="section-container" >
+              <h2 style="color: rgb(1 130 37);">Experience</h2>
+          <div class="container-card"  >
+            <div class="card"  style="background-color:rgb(2 8 32) ;color :rgb(222 222 222); box-shadow: 5px 5px rgb(226 106 79);" >
+
+              <div class="school-icon"  style="background-color:rgb(110 81 163) ; box-shadow: 5px 5px rgb(226 106 79);">
+                <i class="fa-solid fa-building-columns" style="color: rgb(226 106 79) ;"></i>
+                <h4>The University of Jordan</h4>
+              </div>
+              <hr>
+              <div class="school-info" style="background-color:rgb(31 166 186)  ; box-shadow: 5px 5px rgb(226 106 79);">
+                
+                <span style="color :rgb(222 222 222);">Trainee: Part of the Ministry of Information & Communications Technology Training Program  at the Computer Center.</span>
+                <i style="color: rgb(1 130 37);">2014 - 2015</i>
+              </div>
+            </div>
+
+            <div class="card">
+
+              <div class="school-icon">
+                <i class="fa-solid fa-house-laptop"></i>
+                <h4>Aqaba Special Economic Zone Authority</h4>
+              </div>
+              <hr>
+              <div class="school-info">
+                
+                <span>Various ICT Related Activities at the Department of Information Technology as Part of Graduation Requirements.
+                  </span>
+                <i>2013 - 2014</i>
+              </div>
+            </div>
+           
+          </div>
+
+    </section>
+
+    <section id="skills" class="section-background">
+        
+        <div class="bannar-main" style="background-image:url(./photo/skills.png); ">
+            <div class="upcover">
+                 <h1 id="skills">Skills</h1>
+                 <h3></h3>
+            </div>
+        </div>
+        <div class="section-container">
+          <!-- <h2>Skills</h2> -->
+        <div id= "grid-container">
+          <div class="skills-header"><h2 style="color:white">Soft Skills</h2></div>
+          <div class="skills-header"><h2 style="color:white">Technical Skills</h2></div>
+          <div class="change">Team Work</div>
+          <div class="change">HTML5</div>
+          <div class="change">Active Learning</div>
+          <div class="change">CSS3</div>
+          <div class="change">Problem Solving</div>
+          <div class="change">Bootstrap</div>
+          <div class="change">Analysis</div>
+          <div class="change">Java</div>
+          <div class="change">Communication</div>
+          <div class="change">Php</div>       
+        </div>
+        </div>
+</content>
+<footer id="contact" class="built-footer">
+  <div class="grid-footer">
+    <div id="logo-footer"><img src="./photo/logo-footer.png" alt="logoimg" style="width:21vw"> 
+    </div>
+    <div>
+      <p style="text-transform:capitalize;">israa zuhair almuhaisen</p>
+    </div>
+    <div><a href="https://github.com/Israa-Almuhaisen" target="_blank"><i class="fa-brands fa-github footer_icon" ></i></a></div>
+    <div>
+      <p><a href="mailto:israa.muhaisen89@gmail.com"><i class="fa-solid fa-envelope footer_icon"></i>  israa.muhaisen89@gmail.com</a></p>
+    </div>
+    <div><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-square-twitter footer_icon"></i></a></div>
+    <div><a href=""><i class="fa-sharp fa-solid fa-print footer_icon "></i> Print CV</a></div>
+    <div>
+      <p><a href="tel:00962778082251"><i class="fa-sharp fa-solid fa-phone footer_icon"></i>  Call No: 00962778082251</a></p>
+    </div>
+    <div><a href="https://www.linkedin.com/in/israa-almuhaisen-901249253/" target="_blank"><i class="fa-brands fa-linkedin footer_icon"></i></a></div>
+
+  </div>
+
+  
+</footer>
+</body>
+</html>
